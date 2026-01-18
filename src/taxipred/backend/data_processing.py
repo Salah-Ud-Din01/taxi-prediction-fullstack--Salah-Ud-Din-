@@ -1,7 +1,8 @@
-from taxipred.utils.constants import TAXI_CSV_PATH
 import pandas as pd
+from pathlib import Path
 
-print(TAXI_CSV_PATH)
+BASE_PATH = Path(__file__).resolve().parents[2]
+DATA_PATH = BASE_PATH / "data" / "taxi_trip_pricing.csv"
 
-df = pd.read_csv(TAXI_CSV_PATH)
-print(df.head())
+def load_data(n_rows: int = 100):
+    return pd.read_csv(DATA_PATH).head(n_rows)
