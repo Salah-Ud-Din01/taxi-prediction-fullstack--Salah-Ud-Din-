@@ -1,0 +1,44 @@
+ece3213 Final fix: fully working FastAPI backend and data processing (Uppgift 3)
+ src/taxipred/__pycache__/__init__.cpython-313.pyc        | Bin 0 -> 203 bytes
+ src/taxipred/backend/__pycache__/api.cpython-313.pyc     | Bin 0 -> 1650 bytes
+ .../backend/__pycache__/data_processing.cpython-313.pyc  | Bin 0 -> 1346 bytes
+ src/taxipred/backend/api.py                              |   3 ++-
+ src/taxipred/backend/data_processing.py                  |   9 ++-------
+ 5 files changed, 4 insertions(+), 8 deletions(-)
+a7b756e refactor: finalize FastAPI backend and data processing logic
+ src/taxipred/backend/api.py              |  19 +++
+ src/taxipred/backend/data_processing.py  |  15 +++
+ src/taxipred/model_development/eda.ipynb | 216 +------------------------------
+ 3 files changed, 40 insertions(+), 210 deletions(-)
+5ca59a3 feat: initialize FastAPI app and add data loading helper
+ src/taxipred/backend/api.py             |  7 +++++++
+ src/taxipred/backend/data_processing.py |  9 +++++----
+ src/taxipred/utils/constants.py         | 10 ----------
+ 3 files changed, 12 insertions(+), 14 deletions(-)
+74b8f99 Model training pipeline finished: feature encoding, training, evaluation, and joblib export
+ src/taxipred/model_development/model_dev.ipynb     | 290 +++++++++------------
+ .../models/taxi_price_model.joblib                 | Bin 0 -> 138454 bytes
+ 2 files changed, 124 insertions(+), 166 deletions(-)
+4d1cb7a Start ML workflow: load data, clean NaNs, prepare train/test split
+ src/taxipred/model_development/model_dev.ipynb | 243 +++++++++++++++++++++++++
+ 1 file changed, 243 insertions(+)
+6556ad0 Uppgift 1: cleaned data, removed outliers, and saved processed dataset
+ src/taxipred/model_development/eda.ipynb | 294 ++++++++++++++++++++++++++++---
+ 1 file changed, 270 insertions(+), 24 deletions(-)
+fbf6ab1 Uppgift 1: Added imports, loaded dataset, initial EDA (df.head, info, describe, null check)
+ src/taxipred/backend/data_processing.py  |    7 +
+ src/taxipred/data/taxi_trip_pricing.csv  | 1001 ++++++++++++++++++++++++++++++
+ src/taxipred/model_development/eda.ipynb |  116 ++++
+ src/taxipred/utils/constants.py          |   10 +
+ 4 files changed, 1134 insertions(+)
+aa41d4b Initial project structure, README, .gitignore, and virtual environment setup
+ .gitignore                                     | 0
+ README.md                                      | 0
+ src/taxipred/__init__.py                       | 0
+ src/taxipred/backend/api.py                    | 0
+ src/taxipred/backend/data_processing.py        | 0
+ src/taxipred/frontend/app.py                   | 0
+ src/taxipred/model_development/eda.ipynb       | 0
+ src/taxipred/model_development/model_dev.ipynb | 0
+ src/taxipred/utils/constants.py                | 0
+ 9 files changed, 0 insertions(+), 0 deletions(-)
