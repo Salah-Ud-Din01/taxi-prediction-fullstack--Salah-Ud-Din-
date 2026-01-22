@@ -1,7 +1,7 @@
 import streamlit as st
 import requests
 
-st.title("Taxi Price Prediction")
+st.title("Price prediction fro taxi trips")
 
 
 st.subheader("Step 1: Enter Trip Details")
