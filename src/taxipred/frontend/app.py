@@ -1,7 +1,7 @@
 import streamlit as st
 import requests
 
-st.title("Price prediction fro taxi trips")
+st.title("price prediction fro taxi trips")
 
 
 st.subheader("Step 1: Enter Trip Details")
@@ -26,6 +26,7 @@ if st.button("Predict Price", key="predict_button"):
       
         data = response.json()
         st.success(f"Predicted Price: ${data['predicted_price']}")
+
     except requests.exceptions.RequestException as e:
             st.error(f"Request failed. Check backend.\n{e}\nResponse text: {getattr(e.response, 'text', '')}")
 
