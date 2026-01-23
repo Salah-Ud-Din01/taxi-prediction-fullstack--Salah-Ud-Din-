@@ -54,3 +54,51 @@ Example request:
   "passenger_count": 1,
   "pickup_hour": 12
 }
+
+
+---
+
+## Frontend (Streamlit)
+The frontend is built using Streamlit and allows the user to:
+- Enter trip distance
+- Enter passenger count
+- Enter pickup hour
+- Get a predicted taxi price from the backend API
+
+---
+
+## How to Run the Project
+
+### 1. Create and activate virtual environment
+```bash
+python -m venv venv
+source venv/Scripts/activate   # Windows
+
+#all packages installation
+pip install -r requirements.txt
+
+#Run the Backend
+cd src/taxipred/backend
+uvicorn taxipred.backend.api:app --reload
+#and it will run at 
+http://127.0.0.1:8000
+
+#Running the frontend
+cd src/taxipred/frontend
+streamlit run app.py
+
+
+![alt text](image-1.png)
+
+
+
+![alt text](image.png)
+
+Technologies used in this project
+Python 
+Pandas
+scikit-learn
+FadtApi
+Streamlit
+Joblib
+Git & Github
