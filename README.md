@@ -35,7 +35,7 @@ streamlit run app.py
 - `GET /` - Welcome message
 - `POST /predict` - Predict price
 
-### Screenshots 
+
 ## Screenshots
 
 ### Streamlit Frontend

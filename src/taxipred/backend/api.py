@@ -4,23 +4,23 @@ from pydantic import BaseModel
 import pandas as pd
 import joblib
 
-# 1️⃣ Load the saved best model
+# Load the saved best model
 model = joblib.load("models/taxi_model.joblib")  # make sure this path is correct
 
-# 2️⃣ Initialize FastAPI
+#  Initialize FastAPI
 app = FastAPI(title="Taxi Trip Price Prediction API")
 
-# 3️⃣ Define input schema (matches numeric features in your model)
+#  Define input schema (matches numeric features in your model)
 class TripInput(BaseModel):
     Trip_Distance_km: float
     Passenger_Count: int
 
-# 4️⃣ Test endpoint
+# Test endpoint
 @app.get("/")
 def root():
-    return {"message": "Taxi Trip Price Prediction API is running"}
+    return { "Taxi Trip Price Prediction API is running"}
 
-# 5️⃣ Prediction endpoint
+#  Prediction endpoint
 @app.post("/predict")
 def predict(trip: TripInput):
     # Convert input to dataframe
